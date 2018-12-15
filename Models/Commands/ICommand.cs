@@ -1,5 +1,6 @@
 using Telegram.Bot;
 using Telegram.Bot.Types;
+using System.Threading.Tasks;
 
 namespace TestBot.Models.Commands
 {
@@ -16,15 +17,15 @@ namespace TestBot.Models.Commands
         /// <summary>
         /// Выполнить команду
         /// </summary>
-        /// <param name="message">Соббщение бота</param>
+        /// <param name="message">Сообщение бота</param>
         /// <param name="client">Телеграм бот клиент</param>
-         void Execute(Message message, TelegramBotClient client);
+        Task Execute(Message message, TelegramBotClient client);
 
         /// <summary>
         /// Команда содержится в тексте
         /// </summary>
         /// <param name="comment">Текст</param>
         /// <returns></returns>
-         bool Contains(string text);  
+        bool Contains(string text);  
     }
 }

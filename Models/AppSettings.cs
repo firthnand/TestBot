@@ -21,7 +21,7 @@ namespace TestBot.Models
         /// <summary>
         /// Имя бота
         /// </summary>
-        public static string Name {get; set; } = "FerdinanzAlphaBot";
+        public static string Name {get; set; } = "Alpha";
         
         /// <summary>
         /// API Кюч бота
