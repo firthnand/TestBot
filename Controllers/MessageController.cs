@@ -26,15 +26,8 @@ namespace TestBot.Controllers
         {
             Message message = update.Message;
             TelegramBotClient client = await Bot.GetAsync();
-            foreach (ICommand command in Bot.Commands)
-            {
-                if (command.Contains(message.Text))
-                {
-                    command.Execute(message, client);
-                    break;
-                }
-            }
-
+            Bot.ExecuteCommands(update.Message);
+            
             return Ok();
 
         }
