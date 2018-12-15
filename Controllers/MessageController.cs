@@ -14,15 +14,14 @@ namespace TestBot.Controllers
     [ApiController]
     public class MessageController: ControllerBase
     {
-        // [Route(@"api/message/update")]
-        // public OKResult Update()
-        // {
-
-        // }
-
         // POST: api/MessageController/update
         [Route("api/[controller]/[action]")]
         [HttpPost]
+        /// <summary>
+        /// Web hook Update action
+        /// </summary>
+        /// <param name="update">Update message from Telegram</param>
+        /// <returns>ActionResult</returns>
         public async Task<ActionResult> Update(Update update)
         {
             Message message = update.Message;
